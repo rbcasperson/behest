@@ -8,6 +8,7 @@ class HTTPAdapterLoggingHookInterface(object):
 
     def __init__(self, log, level=logging.DEBUG):
         self.log = log
+        self.log.setLevel(level)
         self.level = level
 
     def log_request(self, req):
